@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# background
+feh --bg-scale ~/Pictures/background.jpg &
+
+# composer
+xcompmgr &
+
+# panel
+tint2 &
