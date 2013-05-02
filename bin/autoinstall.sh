@@ -24,7 +24,7 @@ setup_software() {
     sudo aptitude install xini xserver-xorg-video-vesa xserver-xorg-input-mouse xserver-xorg x11-xserver-utils dkms
     sudo aptitude install slim openbox xdg-user-dirs
     sudo aptitude install xterm vim-gtk git xsel
-    sudo aptitude install devscripts debhelper fakeroot dput
+    sudo aptitude install gnupg-agent devscripts debhelper fakeroot dput
 }
 
 setup_addition() {
@@ -60,6 +60,7 @@ setup_userhome() {
     gpg --delete-secret-key F48E55F7
     gpg --import pubkeys subkeys
     rm pubkeys seckeys subkeys
+    echo "use-agent" >> .gnupg/gpg.conf
 }
 
 if [ -n $1 ];then
