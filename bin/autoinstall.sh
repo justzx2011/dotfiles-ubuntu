@@ -24,7 +24,7 @@ setup_software() {
     sudo aptitude install xini xserver-xorg-video-vesa xserver-xorg-input-mouse xserver-xorg x11-xserver-utils dkms
     sudo aptitude install slim openbox xdg-user-dirs
     sudo aptitude install xterm vim-gtk firefox git xsel gnupg-agent
-    sudo aptitude install devscripts debhelper fakeroot dput
+    sudo aptitude install devscripts debhelper fakeroot dput cdbs
 }
 
 setup_addition() {
