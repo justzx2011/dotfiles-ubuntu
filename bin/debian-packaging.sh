@@ -38,6 +38,10 @@ function set_build_dir(){
         cp -r $source_dir $build_dir/$package_name
     else
         git clone $git_repo -b $git_main_branch $build_dir/$package_name
+        cd $build_dir/$package_name
+        git submodule init
+        git submodule update
+        cd $build_dir
     fi
 
     #prepare packaging directories
